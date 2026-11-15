@@ -11,6 +11,8 @@
 7. Select **Check out** on that vehicle. The fee appears above the list.
 8. Stop with Ctrl+C. In-memory parking records reset when the container stops.
 
+If port 8080 is busy, use `-p 18080:8080` and open `http://localhost:18080` instead.
+
 ## Quick API check
 
 In a second Terminal window:
@@ -23,6 +25,8 @@ curl -X POST http://localhost:8080/api/parking/exit -H 'Content-Type: applicatio
 ```
 
 The first response should show `freeSlots: 10`. Entry returns slot 1, the vehicle list shows the plate, and exit returns a fee of 20 units for a short stay.
+
+Verified in Docker on 15 November 2026: the dashboard returned HTTP 200; availability returned 10; entry assigned slot 1; the vehicle appeared in the list; exit returned a fee of 20.
 
 ## Without Docker
 
