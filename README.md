@@ -43,3 +43,7 @@ curl -X POST localhost:8080/api/parking/exit -H 'Content-Type: application/json'
 - `src/test`: rule tests
 
 For development, run `mvn spring-boot:run` in the root and `npm run dev` in `frontend`; Vite serves the UI at `http://localhost:5173` and forwards API calls to port 8080.
+
+## Interface design
+
+The app uses a custom Material UI theme, locally bundled Inter typography, clearer controls, and responsive layouts. See the [design notes and palette](docs/DESIGN.md).
